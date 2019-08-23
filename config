@@ -182,7 +182,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         # status_command i3status
-        status_command i3blocks -c /home/autarch/.config/i3/i3blocks.conf
+        status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
         position top
         colors {
           background #114f3d
@@ -191,11 +191,11 @@ bar {
 
 bindsym Alt+l i3lock --color 000000
 
-exec feh --bg-center /home/autarch/wallpaper/Grass-Wallpaper-green-19784909-2560-1600.jpg
+exec feh --bg-center $HOME/wallpaper/Grass-Wallpaper-green-19784909-2560-1600.jpg
 exec setxkbmap -layout us,ru -option grp:alt_shift_toggle
 exec gxkb
-exec bash /home/autarch/scripts/onmouse_touchpad_off.sh
-client.focused #4c4c4c #4c3c3c #04ff04 #2e9ef4 #285577
+exec bash $HOME/scripts/onmouse_touchpad_off.sh
+client.focused #2c4c4c #1b3c3c #04ff04 #2e9ef4 #285577
 bindsym Ctrl+Shift+l exec i3lock --color 000000
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 bindsym $mod+Shift+v exec lxterminal -e alsamixer

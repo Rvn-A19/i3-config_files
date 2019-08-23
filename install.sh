@@ -14,7 +14,7 @@ if [ ! -d "$HOME/.fonts" ]; then
 fi
 
 cd bin
-for fontfile in *; do
+for fontfile in *.otf; do
   if [ ! -f "$HOME/.fonts/$fontfile" ]; then
     cp -v "$fontfile" "$HOME/.fonts/"
   else
@@ -22,6 +22,18 @@ for fontfile in *; do
   fi
 done
 cd ..
+
+if [ ! -d "$HOME/scripts" ]; then
+  mkdir "$HOME/scripts"
+fi
+
+cp onmouse_touchpad_off.sh "$HOME/scripts/"
+
+if [ ! -d "$HOME/wallpaper" ]; then
+  mkdir "$HOME/wallpaper"
+fi
+
+cp bin/Grass-Wallpaper-green-19784909-2560-1600.jpg "$HOME/wallpaper"
 
 for f in config i3blocks.conf; do
   
